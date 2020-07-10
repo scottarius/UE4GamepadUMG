@@ -29,21 +29,25 @@ public:
 protected:
 
 	/** Called for forwards/backward input */
+	UFUNCTION(BlueprintCallable, Category = "Pawn")
 	void MoveForward(float Value);
 
 	/** Called for side to side input */
+	UFUNCTION(BlueprintCallable, Category = "Pawn")
 	void MoveRight(float Value);
 
 	/** 
 	 * Called via input to turn at a given rate. 
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
+	UFUNCTION(BlueprintCallable, Category = "Pawn")
 	void TurnAtRate(float Rate);
 
 	/**
 	 * Called via input to turn look up/down at a given rate. 
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
+	UFUNCTION(BlueprintCallable, Category = "Pawn")
 	void LookUpAtRate(float Rate);
 
 	/** Handler for when a touch input begins. */
@@ -54,7 +58,7 @@ protected:
 
 protected:
 	// APawn interface
-	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
+	virtual void SetupPlayerInputComponent(class UInputComponent* InInputComponent) override;
 	// End of APawn interface
 
 public:
