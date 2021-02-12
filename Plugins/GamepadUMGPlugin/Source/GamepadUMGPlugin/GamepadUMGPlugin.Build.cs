@@ -23,7 +23,8 @@ public class GamepadUMGPlugin : ModuleRules
             new string[] {
                 "Slate",
                 "SlateCore",
-                "UMG"
+                "UMG",
+                "DeveloperSettings"
             });
 	}
 }
